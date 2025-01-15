@@ -1,18 +1,14 @@
 Config/*.toml
-!Config/app_exp.toml
 .idea
-
+*.log
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-Assistants/*.wav
-analysis.json
 
 # C extensions
 *.so
-Config/*.json
-Data/*.form
+/llmkira/redis/
 # Distribution / packaging
 .Python
 build/
@@ -63,7 +59,6 @@ coverage.xml
 *.pot
 
 # Django stuff:
-*.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -117,11 +112,11 @@ ENV/
 env.bak/
 venv.bak/
 
-# Spyder project settings
+# Spyder project provider_settings
 .spyderproject
 .spyproject
 
-# Rope project settings
+# Rope project provider_settings
 .ropeproject
 
 # mkdocs documentation
@@ -134,12 +129,24 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-/Config/api_keys.json
-/test/text_analysis_tools/
-Config/config.json
-/Assistants/record.wav
-/Assistants/recording.wav
-/test/Rawdata/openai_kira_/
-/Assistants/config.json
-/Assistants/sound/
-/Data/sticker/src/
+/data/
+/mongodb/
+/redis/
+
+# Ignore dynaconf secret files
+.secrets.*
+/rabbitmq/
+/llmkira/elara.db
+config_dir/*.toml
+config_dir/*.db
+/memray-*.bin
+/memray-*.html
+/docs/test_script/sticker/
+/jobs.sqlite
+config_dir/*.pem
+config_dir/*.secret/
+/.pdm-python
+/.montydb/
+/.snapshot/
+/.tutorial.db
+app/.tutorial.db

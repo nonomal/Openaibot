@@ -1,369 +1,223 @@
-![cover](https://raw.githubusercontent.com/LLMKira/Docs/main/docs/cover.png)
-------------------------------------
+![cover](https://raw.githubusercontent.com/LlmKira/.github/main/llmbot/project_cover.png)
+
+------------------
+
 <p align="center">
-  <img alt="License" src="https://img.shields.io/badge/LICENSE-AGPL-ff69b4">
-  <img src="https://img.shields.io/badge/Python-3.8|9|10|11-green" alt="Python" >
-  <a href="https://afdian.net/a/Suki1077"><img src="https://img.shields.io/badge/Buyme-milk-DB94A2" alt="SPONSOR"></a>
-  <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fsudoskys%2FOpenaibot?ref=badge_small" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsudoskys%2FOpenaibot.svg?type=small"/></a>
+<a href="https://hub.docker.com/repository/docker/sudoskys/llmbot/general">
+    <img src="https://img.shields.io/docker/pulls/sudoskys/llmbot" alt="docker">
+</a>
+<a href="https://badge.fury.io/py/llmkira">
+    <img src="https://badge.fury.io/py/llmkira.svg" alt="docker workflow">
+</a>
+<br />
+<a href="https://t.me/Openai_LLM">
+    <img src="https://img.shields.io/badge/Join-Telegram-blue" alt="telegram">
+</a>
+<a href="https://discord.gg/6QHNdwhdE5">
+    <img src="https://img.shields.io/badge/Join-Discord-blue" alt="discord">
+</a>
+<br/>
+<a href="https://raw.githubusercontent.com/llmkira/openaibot/main/LICENSE">
+    <img src="https://img.shields.io/github/license/llmkira/openaibot" alt="license">
+</a>
+<a href="https://hub.docker.com/repository/docker/sudoskys/llmbot/builds">
+    <img src="https://img.shields.io/docker/v/sudoskys/llmbot" alt="docker build">
+</a>
 </p>
 
-<h2 align="center">OpenaiBot</h2>
+<p align="center">
+  <a href="https://llmkira.github.io/Docs/">🍩 Deploy Docs</a>
+  &
+  <a href="https://llmkira.github.io/Docs/dev/basic">🧀 Dev Docs</a>
+  &
+  <a href=".github/CONTRIBUTING.md">🤝 Contribute</a>
+</p>
 
-## [Imitation of the ChatGpt plugin system for 2.0](https://github.com/LlmKira/LLMBot)
+> Don't hesitate to Star ⭐️, Issue 📝, and PR 🛠️
 
->**This project lost progress due to too many local changes, I have switched to developing 2.0 forward looking projects**
+> Python>=3.9
 
-[中文说明](https://github.com/LlmKira/Openaibot/blob/main/README_ZH.md)
+This project uses the ToolCall feature.
 
-直觉性设计的全平台Bot，多轮会话管理，多模态(语音/图片)理解，自维护套件，交叉追溯回复。
+It integrates a message queuing and snapshot system, offering plugin mechanisms and authentication prior to plugin
+execution.
 
-If you don't have the instant messaging platform you need or you want to develop a new application, you are welcome to
-contribute to this repository.
+The bot adheres to the **Openai Format Schema**. Please adapt using [gateway](https://github.com/Portkey-AI/gateway)
+or [one-api](https://github.com/songquanpeng/one-api) independently.
 
-You can develop a new Controller by using `Event.py`.
+| Demo                                                                          | Vision With Voice                                                        | Code Interpreter                                                                      |
+|-------------------------------------------------------------------------------|--------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
+| ![sticker](https://github.com/LlmKira/Openaibot/raw/main/docs/chain_chat.gif) | ![vision](https://github.com/LlmKira/Openaibot/raw/main/docs/vision.gif) | ![code](https://github.com/LlmKira/Openaibot/raw/main/docs/code_interpreter_func.gif) |
 
-Compatibility with multiple LLMs and integration with GPT and third-party systems is handled by
-our [llm-kira](https://github.com/LLMKira/llm-kira) project on
-GitHub.
+## 🔨 Roadmap
 
-**Please submit an issue/discussion if you have a deployment issue rather than emailing me**
+> The program has iterated to its fourth generation.
 
-## 🥽 Feature
+- [x] Removal of legacy code
+- [x] Deletion of metric system
+- [x] Deletion of model selection system, unified to OpenAI Schema
+- [x] Implementation of a more robust plugin system
+- [x] Project structure simplification
+- [x] Elimination of the Provider system
+- [x] Hook support
+- [x] Access to TTS
+- [x] Add standalone support for gpt-4-turbo and vision
+- [ ] Add LLM reference support to the plugin environment. (extract && search in text)
 
-- It can accurately limit billing, with limits and ID binding. ⚡️
-- Supports asynchronous operations and can handle multiple requests simultaneously. 🚀
-- Allows for private and group chats, catering to different scenarios. 💬
-- Implements chat rate limiting to avoid overly frequent requests. ⏰
-- Provides entertainment and interactive features, allowing for proactive engagement with users. 🎉
-- Includes blacklists, whitelists, and quota systems to control conversation partners. 🔒
-- Designed for full compatibility and strong scalability, adapting to different application scenarios. 🔌
-- Features a memory pool that guarantees the storage of context memory for up to 1000 rounds, with dynamic construction.
-  💾
-- Supports management, roles, and custom writing styles, providing more personalized options. 🤖
-- Integrates Azure and Whisper local voice assistants, offering more ways for voice interaction. 🗣
-- Allows for polling of multiple API keys for easy management, with automatic expiration reminders. 📊
-- Supports multimodal interaction, including image Blip comprehension support, speech recognition, and sticker support.
-  👂😎
-- Has a sound content safety system, including removable content safety components and official API filtering of
-  content. 🔒
-- Theoretically supports cross-platform access to any chat platform. 🌐
-- The intuitive design of the chat allows for cross-replying, retracing replies, trigger-based replies, and the use of
-  stickers for added fun. 😊
-- Theoretical abstract design of third-party information injection LLM, supporting real-time content and automatic
-  injection of the latest information to assist in answering. 🕸
-- Self-maintaining model framework that supports any LLM model and any external API integration, abstracting and
-  unifying access to GPT3 and GPT3.5. 🤖
+## 📦 Features
 
-## 🪜 Deploy It
+- 🍪 A comprehensive plugin development ecosystem, adopting a classic design, and seamless integration with plugins
+  through `pip` installation
+- 📝 Message system with no time or sender constraints, offering fully decoupled logics
+- 📬 Offers Login via a URL mechanism, providing a flexible and expandable authentication development solution
+- 🍰 Empowers users to authorize plugin execution. Users can configure plugin environment variables at their discretion
+- 📦 Support for plugins to access files
+- 🍟 Multi-platform support – extend new platforms by inheriting the base class
+- 🍔 Plugins can determine their appearance in new sessions dynamically, preventing performance degradation despite large
+  amounts of plugins
 
-### 🔨 Check
+### 🍔 Login Modes
 
-Make sure your server has 1GB of RAM and 10GB of free storage.
+- `Login via url`: Use `/login <a token>$<something like https://provider.com/login>` to Login. The program posts the token to the interface to
+  retrieve configuration
+  information, [how to develop this](https://github.com/LlmKira/Openaibot/blob/81eddbff0f136697d5ad6e13ee1a7477b26624ed/app/components/credential.py#L20).
+- `Login`: Use `/login https://<api endpoint>/v1$<api key>$<the model>$<tool model such as gpt-3.5-turbo>` to login
 
-For Arm architecture servers: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh` (The setup.sh can now
-automatically install rust.)
+### 🧀 Plugin Can Do More
 
-### 📦 Deploy/Renew
+| Sticker Converter                   | Timer Function(built-in)        |
+|-------------------------------------|---------------------------------|
+| ![sticker](./docs/sticker_func.gif) | ![timer](./docs/timer_func.gif) |
 
-```shell
-curl -LO https://raw.githubusercontent.com/LLMKira/Openaibot/main/setup.sh && sh setup.sh
-```
+### 🎬 Platform Support
 
-For Chinese users
+| Platform | Support | File System | Remarks                                |
+|----------|---------|-------------|----------------------------------------|
+| Telegram | ✅       | ✅           |                                        |
+| Discord  | ✅       | ✅           |                                        |
+| Kook     | ✅       | ✅           | Does not support `triggering by reply` |
+| Slack    | ✅       | ✅           | Does not support `triggering by reply` |
+| Line     | ❌       |             |                                        |
+| QQ       | ❌       |             |                                        |
+| Wechat   | ❌       |             |                                        |
+| Twitter  | ❌       |             |                                        |
+| Matrix   | ❌       |             |                                        |
+| IRC      | ❌       |             |                                        |
+| ...      |         |             | Create Issue/PR                        |
 
-```shell
-curl -LO https://raw.kgithub.com/LLMKira/Openaibot/main/setup.sh && sh setup.sh
-```
+## 📦 Quick Start
 
-Or [Docker Deploy](https://llmkira.github.io/Docs/guide/getting-started#docker)
+Refer to the [🧀 Deployment Document](https://llmkira.github.io/Docs/) for more information.
 
-### 🍽 Configure
+### 📦 One-click Deployment
 
-- set Redis
-
-```shell
-apt-get install redis
-systemctl enable redis.service --now
-```
-
-- edit bot config
-
-```shell
-cp Config/app_exp.toml Config/app.toml
-
-nano Config/app.toml
-```
-
-```toml
-# Comment out which part you don't want to start
-# 注释你不需要的部分
-
-# QQ Bot
-[Controller.QQ]
-master = [114, 514] # QQ number
-account = 0  # Bot s QQ number
-http_host = 'http://localhost:8080'   # Mirai http Server
-ws_host = 'http://localhost:8080'   # Mirai Websocket Server
-verify_key = ""
-trigger = false # Proactive response when appropriate
-INTRO = "POWER BY OPENAI"  # Suffixes for replies
-ABOUT = "Created by github.com/LLMKira/Openaibot" # /about
-WHITE = "Group NOT in WHITE list" # Whitelist/Blacklist tips
-# Proxy set, but does not proxy openai api, only bot
-proxy = { status = false, url = "http://127.0.0.1:7890" }
-
-# Telegram Bot
-[Controller.Telegram]
-master = [114, 514] # User Id @JsonDumpBot
-botToken = '' # Bot Token @botfather
-trigger = false
-INTRO = "POWER BY OPENAI"
-ABOUT = "Created by github.com/LLMKira/Openaibot"
-WHITE = "Group NOT in WHITE list"
-# 设置的代理，只代理 bot  openai api->service.json 
-proxy = { status = false, url = "http://127.0.0.1:7890" }
-
-# 基础对话事件服务器，Web支持或者音箱用&Use by Voice Assistant
-[Controller.BaseServer]
-host = "127.0.0.1"
-port = 9559
-```
-
-If you want configure the backend or openai proxy. Please
-Check [Deploy Docs](https://llmkira.github.io/Docs/guide/service)
-
-### 🪶 App Token
-
-- Telegram
-
-[Telegram BotToken Request](https://t.me/BotFather)
-
-Make sure *the bot is a group admin* or *privacy mode is turned off*.
-
-- QQ
-
-[Configuring the QQ bot](https://graiax.cn/before/install_mirai.html)
-
-### 🌻 Run Bot
-
-Our robots can be started in multiple processes.
+If you are using a brand-new server, you can use the following shell to automatically install this project.
 
 ```shell
+curl -sSL https://raw.githubusercontent.com/LLMKira/Openaibot/main/deploy.sh | bash
+```
+
+### 📦 Manual Installation
+
+```shell
+# Install Voice dependencies
+apt install ffmpeg
+# Install RabbitMQ
+docker pull rabbitmq:3.10-management
+docker run -d -p 5672:5672 -p 15672:15672 \
+  -e RABBITMQ_DEFAULT_USER=admin \
+  -e RABBITMQ_DEFAULT_PASS=8a8a8a \
+  --hostname myRabbit \
+  --name rabbitmq \
+  rabbitmq:3.10-management
+docker ps -l
+# Install Project
+git clone https://github.com/LlmKira/Openaibot/
+cd Openaibot
+pip install pdm
+pdm install -G bot
+cp .env.exp .env && nano .env
+# Test
+pdm run python3 start_sender.py
+pdm run python3 start_receiver.py
+# Host
 apt install npm
-npm install pm2@latest -g
-# or
-yarn global add pm2
-
-# test bot
-python3 main.py
-
-# run bot
+npm install pm2 -g
 pm2 start pm2.json
-
-
-pm2 status
-
-# stop bot
-pm2 stop pm2.json
-pm2 stop xx(id)
-pm2 restart x(id)
 ```
 
-Once configured, send a message and use the `/add_white_user` command to add your platform ID returned by the bot to the
-whitelist and you will be able to talk.
-Or use `/close_group_white_mode` to turn off the bot's *group whitelist* mode.
+> **Be sure to change the default password for the command, or disable open ports to prevent the database from being
+scanned and attacked.**
 
-### 🎤 Or Run Voice Assistant
+### 🥣 Docker
 
-In addition to the robot, we also have a voice assistant.
+Build Hub: [sudoskys/llmbot](https://hub.docker.com/repository/docker/sudoskys/llmbot/general)
 
-Voice Assistant is a web-dependent voice assistant that you can easily run on small devices through Azure or Openai's
-recognition services.
+> Note that if you run this project using Docker, you will start Redis, MongoDB, and RabbitMQ. But if you're running
+> locally, just RabbitMQ
 
-- Run BaseEvent Server
-
-```toml
-# 基础对话事件服务器，Web支持或者音箱用
-[Controller.BaseServer]
-port = 9559
-```
-
-- Run Vits Server
-
-https://github.com/LlmKira/MoeGoe
-
-- Run Assistant
+#### Manual Docker-compose Installation
 
 ```shell
-cd Assistant
-cat install.md
-pip3 install -r requirements.txt
-python3 clinet.py
+git clone https://github.com/LlmKira/Openaibot.git
+cd Openaibot
+cp .env.exp .env&&nano .env
+docker-compose -f docker-compose.yml up -d
 ```
 
-### 🥕 Add Api Key
+The Docker configuration file `docker-compose.yml` contains all databases. In fact, Redis and MongoDB are not required.
+You can remove these databases yourself and use the local file system.
 
-Use `/add_api_key` Command add [OpenaiKey](https://beta.openai.com/account/api-keys) to `Config/api_keys.json`.
+Update image using `docker-compose pull`.
 
-### 🫧 About ID
+Use `docker exec -it llmbot /bin/bash` to view Shell in Docker, enter `exit` to exit.
 
-You'll be wondering about our multi-platform ID system. This is how we store your ID in our
-json/database: `real_id` + `suffix`.
-
-- toml
-
-Use your real ID in `app.toml`, which is the whitelist prompt without the suffix.
-
-- json/command
-
-When using the user/group authorization command, you need to follow the real ID with the corresponding suffix ID.
-
-| Controller | suffix_id | desc |
-|------------|-----------|------|
-| QQ         | 101       |      |
-| Telegram   | 100       |      |
-| Api        | 103       |      |
-
-### 🥪 About Models
-
-#### ChatGpt
-
-| models             | token limit | cost                                                       |
-|--------------------|-------------|------------------------------------------------------------|
-| gpt-3.5-turbo      | 4095        | optimized for chat at 1/10th the cost of text-davinci-003. |
-| gpt-3.5-turbo-0301 | 4095        | optimized for chat at 1/10th the cost of text-davinci-003. |
-
-#### GPT3
-
-| models           | token limit | cost                                                          |
-|------------------|-------------|---------------------------------------------------------------|
-| code-davinci-002 | 8000        | During this initial limited beta period, Codex usage is free. |
-| code-cushman-001 | 2048        | During this initial limited beta period, Codex usage is free. |
-| text-davinci-003 | 4000        | $0.0200  /1K tokens                                           |
-| text-curie-001   | 2048        | $0.0020  /1K tokens                                           |
-| text-babbage-001 | 2048        | $0.0005  /1K tokens                                           |
-| text-ada-001     | 2048        | $0.0004  /1K tokens                                           |
-
-### Keyword filtering configuration
-
-To prevent malicious inducement and attacks, we have two measures: OpenAI TosApi filtering and simplified/traditional
-Chinese
-keyword filtering.
-
-*Simplified/traditional Chinese keyword filtering(Only For Chinese)*
-
-If not exist, the sensitive word file will be automatically initialized into `Data/Danger.form`, and it can be disabled
-by clearing it to one line.
-
-*OpenAI TosApi filtering*
-
-Leave the inspection type array empty to disable the filter.
-
-Please see [Service Configuration Guide](https://llmkira.github.io/Docs/guide/service).
-
-### 🌽 `/Config` File
-
-Our `llm-kira` dependency library is stored in the current package directory when there is no Redis support.
-
-The application itself is stored in Redis for robustness, except for `api_keys.json`, `service.json`
-and `assistants.json`.
-
-If you have `config.json`, the application will automatically initialise this file. And you can update the configuration
-to this file using the `/config` command.
-
-### 🎸 Command
-
-Due to lack of maintainers, some commands only work on some platforms.
+## 🍪 Slash Commands
 
 ```shell
-chat - talk
-write - continue writing
-forgetme - reset memory
-remind - Scene setting cancel overwrite with short text
-voice - voice support
-style - set the preferred word
-
-trigger - Admin initiates unsolicited responses
-trace - Admin activates automatic tracking of associated channels
-cross - whether the Admin starts a cross-response
-silent - Admin starts silent error reporting
-
-auto_adjust - automatic optimizer
-set_user_cold - set user cooldown
-set_group_cold - set group cooldown
-set_token_limit - set output limit length
-set_input_limit - set input limit length
-see_api_key - Several Api keys now
-del_api_key - Delete Api key
-add_api_key - add Api key
-config - get/backup hot configuration file
-set_per_user_limit - set normal user limit
-set_per_hour_limit - set user hour limit
-promote_user_limit - Promote user limit
-reset_user_usage - Reset user usage
-add_block_group - block group
-del_block_group - Unblock group
-add_block_user - block user
-del_block_user - Unblock user
-add_white_group - add whitelist group
-add_white_user - add whitelist user
-del_white_group - delist whitelist group
-del_white_user - remove whitelist user
-update_detect - update sensitive words
-open_user_white_mode - open user whitelist
-open_group_white_mode - open group whitelist
-close_user_white_mode - close user whitelist
-close_group_white_mode - close group whitelist
-open - open the robot
-close - close the robot
-change_head - set head switch
-change_style - set the style switch
-help - help
+clear - Deletes chat records
+login - Login to the bot
+help - Displays documentation
+chat - Conversation
+task - Use a function to converse
+ask - Disable function-based conversations
+tool - Lists all functions
+auth - Authorize a function
+env - Environment variables of the function
+learn - Learn your instructions, /learn reset to clear
 ```
 
-### 🧀 More Docs
+## 💻 How to Develop Plugins?
 
-Details On [Deploy Guide](https://llmkira.github.io/Docs/en/guide/getting-started)
+Refer to the example plugins in the `plugins` directory and
+the [🧀 Plugin Development Document](https://llmkira.github.io/Docs/dev/basic) for plugin development documentation.
 
-Network Plugins/Proxy Settings/Custom Model Names/Speech Services/Picture Understanding/Censor Configuration
-Please see [Service Configuration Guide](https://llmkira.github.io/Docs/guide/service)
+### Hooks
 
-详细接口/服务配置/自定义 请查看文档 [Deploy Guide](https://llmkira.github.io/Docs/guide/getting-started)
+Hooks control the EventMessage in sender and receiver. For example, we have `voice_hook` in built-in hooks.
 
-贴纸设置/代理设置/切换其他模型/语音服务/图片理解/审查配置
-请查看 [服务配置](https://llmkira.github.io/Docs/guide/service)
+you can enable it by setting `VOICE_REPLY_ME=true` in `.env`.
 
-## 🤗 Join Our Community
+```shell
+/env VOICE_REPLY_ME=yes
+# must
 
-<a href="https://github.com/LLMKira/Openaibot/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=LLMKira/Openaibot" />
-</a>
-
-## ❤ Thanks
-
-- [QuickDev](https://github.com/TelechaBot/BaseBot)
-- [LLM Kira](https://github.com/LLMKira/llm-kira)
-- [text_analysis_tools](https://github.com/murray-z/text_analysis_tools)
-- [MoeGoe Voice](https://github.com/CjangCjengh/MoeGoe)
-- [duckduckgo_search](https://github.com/deedy5) @deedy5
-
-## 🍞 Other similar projects
-
-- ChatGPT Mirai Bot is a QQ bot based on the ChatGPT Web Api& Edge Api & GPT3.5
-
-https://github.com/lss233/chatgpt-mirai-qq-bot
-
-## 📃 License
-
-```markdown
-This project open source and available under
-the [AGPL License](https://github.com/LLMKira/Openaibot/blob/main/LICENSE).
+/env REECHO_VOICE_KEY=<key in dev.reecho.ai>
+# not must
 ```
 
-[CLAUSE](https://github.com/LlmKira/Openaibot/blob/main/CLAUSE.md) 说明了如何授权，声明，附加条款等内容。
+use `/env VOICE_REPLY_ME=NONE` to disable this env.
 
-### Fossa
+check the source code in `llmkira/extra/voice_hook.py`, learn to write your own hooks.
 
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsudoskys%2FOpenaibot.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsudoskys%2FOpenaibot?ref=badge_large)
+## 🧀 Sponsor
 
-> You wouldn't believe it, but Ai also wrote part of this Readme
+[![sponsor](./.github/sponsor_ohmygpt.png)](https://www.ohmygpt.com)
+
+## 📜 Notice
+
+> This project, named OpenAiBot, signifying "Open Artificial Intelligence Robot", is not officially affiliated with
+> OpenAI.
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsudoskys%2FOpenaibot.svg?type=small)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsudoskys%2FOpenaibot?ref=badge_small)
